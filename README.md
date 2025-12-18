@@ -70,8 +70,12 @@ acf-blocks-starter/
 │   └── example-gallery/
 │       ├── block.json
 │       ├── fields.php
+│       └── render.php
+│   └── popup-modal/
+│       ├── block.json
+│       ├── fields.php
 │       ├── render.php
-│       └── example-gallery.js  # JS vanilla (opcional)
+│       └── popup-modal.js
 ├── includes/
 │   ├── acf-setup.php        # ACF JSON sync
 │   ├── register-blocks.php  # Auto-registro
@@ -95,6 +99,12 @@ Galería responsive:
 - **Mobile**: Carrusel vanilla JS con touch swipe
 - **Desktop**: Grid 2/3/4 columnas
 - **Schema.org**: ImageGallery opcional
+
+### Popup Modal
+Ventana emergente configurable:
+- **Timer**: Retraso de aparición ajustable.
+- **Cierre**: Botón "X", clic en overlay o tecla ESC.
+- **Persistencia**: Uso de `localStorage` con expiración en horas.
 
 ## 🛠️ Scripts NPM
 
