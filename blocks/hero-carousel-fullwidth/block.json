@@ -1,0 +1,40 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "acf/hero-carousel-fullwidth",
+    "title": "Hero Carousel Fullwidth",
+    "description": "Un carrusel tipo hero visualmente limpio, editorial y de alto impacto.",
+    "category": "acf-blocks",
+    "icon": "cover-image",
+    "keywords": [
+        "hero",
+        "carousel",
+        "slider",
+        "fullwidth",
+        "banner"
+    ],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "render.php",
+        "blockVersion": 3
+    },
+    "supports": {
+        "anchor": true,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "customClassName": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview"
+        }
+    }
+}
