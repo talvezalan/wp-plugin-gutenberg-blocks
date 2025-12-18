@@ -71,6 +71,11 @@ acf-blocks-starter/
 │       ├── block.json
 │       ├── fields.php
 │       └── render.php
+│   ├── hero-carousel-fullwidth/
+│   │   ├── block.json
+│   │   ├── fields.php
+│   │   ├── render.php
+│   │   └── hero-carousel-fullwidth.js
 │   └── popup-modal/
 │       ├── block.json
 │       ├── fields.php
@@ -105,6 +110,13 @@ Ventana emergente configurable:
 - **Timer**: Retraso de aparición ajustable.
 - **Cierre**: Botón "X", clic en overlay o tecla ESC.
 - **Persistencia**: Uso de `localStorage` con expiración en horas.
+
+### Hero Carousel Fullwidth
+Carrusel de alto impacto a pantalla completa:
+- **Imágenes Duales**: Soporte para imágenes optimizadas en Desktop y Mobile.
+- **Autoplay**: Configurable con velocidad ajustable desde ACF.
+- **Interactividad**: Navegación por flechas y puntos (dots) con animaciones suaves.
+- **Semántica**: Estructura accesible con atributos ARIA y roles específicos.
 
 ## 🛠️ Scripts NPM
 
