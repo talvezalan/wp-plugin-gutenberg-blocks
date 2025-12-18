@@ -1,0 +1,37 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "acf/popup-modal",
+    "title": "Popup Modal",
+    "description": "Un modal emergente con imagen, enlace y cierre automático o manual.",
+    "category": "acf-blocks",
+    "icon": "megaphone",
+    "keywords": [
+        "popup",
+        "modal",
+        "anuncio",
+        "conversion"
+    ],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "render.php",
+        "blockVersion": 3
+    },
+    "supports": {
+        "anchor": true,
+        "customClassName": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "style": "file:./popup-modal.css",
+    "script": "file:./popup-modal.js",
+    "example": {
+        "attributes": {
+            "mode": "preview"
+        }
+    }
+}
