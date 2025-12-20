@@ -115,7 +115,8 @@ Ventana emergente configurable:
 Carrusel de alto impacto a pantalla completa:
 - **Imágenes Duales**: Soporte para imágenes optimizadas en Desktop y Mobile.
 - **Autoplay**: Configurable con velocidad ajustable desde ACF.
-- **Interactividad**: Navegación por flechas y puntos (dots) con animaciones suaves.
+- **Interactividad**: Navegación por flechas y puntos (dots) con animaciones suaves y paleta actualizada (secondary-400).
+- **Slides Clickeables**: Soporte para enlaces en cada slide con optimización SEO (rel="nofollow") y accesibilidad.
 - **Semántica**: Estructura accesible con atributos ARIA y roles específicos.
 
 ## 🛠️ Scripts NPM
