@@ -44,13 +44,28 @@ if (empty($slides)) {
             $heading = $slide['heading'];
             $text = $slide['text'];
             $button = $slide['button'];
+            $slide_link = $slide['slide_link'];
         ?>
             <article 
                 class="acfb-w-full acfb-min-w-full acfb-h-full acfb-flex-shrink-0 acfb-relative acfb-flex acfb-items-center acfb-justify-center acfb-overflow-hidden acfb-snap-center"
                 aria-roledescription="slide"
                 aria-label="<?php echo esc_attr("Slide " . ($index + 1) . " de " . count($slides)); ?>"
             >
-                <!-- Background Image -->
+                <!-- Background & Link Wrapper -->
+                <?php if ($slide_link): 
+                    $s_url = $slide_link['url'];
+                    $s_target = $slide_link['target'] ?: '_self';
+                    $s_rel = $s_target === '_blank' ? ' rel="nofollow"' : '';
+                    $s_title = $slide_link['title'] ?: ($heading ?: 'Slide ' . ($index + 1));
+                ?>
+                    <a href="<?php echo esc_url($s_url); ?>" 
+                       target="<?php echo esc_attr($s_target); ?>" 
+                       <?php echo $s_rel; ?>
+                       class="acfb-absolute acfb-inset-0 acfb-z-10 acfb-block acfb-border-none acfb-outline-none"
+                       aria-label="<?php echo esc_attr($s_title); ?>"
+                    >
+                <?php endif; ?>
+
                 <div class="acfb-absolute acfb-inset-0 acfb-bg-cover acfb-bg-center acfb-bg-no-repeat acfb-hidden md:acfb-block" 
                      style="background-image: url('<?php echo esc_url($img_desktop); ?>'); background-position: center center;">
                 </div>
@@ -63,9 +78,13 @@ if (empty($slides)) {
                     <div class="acfb-absolute acfb-inset-0 acfb-bg-main-black/60"></div>
                 <?php endif; ?>
 
+                <?php if ($slide_link): ?>
+                    </a>
+                <?php endif; ?>
+
                 <!-- Content -->
                 <?php if ($heading || $text || $button): ?>
-                    <header class="acfb-relative acfb-z-10 acfb-text-left acfb-max-w-4xl acfb-px-8 md:acfb-px-16 acfb-mr-auto acfb-w-full">
+                    <header class="acfb-relative acfb-z-20 acfb-text-left acfb-max-w-4xl acfb-px-8 md:acfb-px-16 acfb-mr-auto acfb-w-full">
                         <?php if ($heading): ?>
                             <h2 class="acfb-text-4xl md:acfb-text-6xl acfb-font-bold acfb-text-main-white acfb-mb-4 acfb-leading-tight">
                                 <?php echo esc_html($heading); ?>
@@ -85,7 +104,7 @@ if (empty($slides)) {
                         ?>
                             <a href="<?php echo esc_url($btn_url); ?>" 
                                target="<?php echo esc_attr($btn_target); ?>"
-                               class="acfb-inline-block acfb-bg-main-black acfb-text-main-white acfb-font-medium acfb-py-3 acfb-px-8 acfb-rounded-full acfb-shadow-md acfb-transition-all acfb-duration-300 hover:acfb-scale-105 hover:acfb-shadow-lg acfb-no-underline acfb-transform"
+                               class="acfb-relative acfb-z-30 acfb-inline-block acfb-bg-main-black acfb-text-main-white acfb-font-medium acfb-py-3 acfb-px-8 acfb-rounded-full acfb-shadow-md acfb-transition-all acfb-duration-300 hover:acfb-scale-105 hover:acfb-shadow-lg acfb-no-underline acfb-transform"
                                style="text-decoration: none;"
                             >
                                 <?php echo esc_html($btn_title); ?>
@@ -114,7 +133,7 @@ if (empty($slides)) {
         <div class="acfb-absolute acfb-bottom-6 acfb-left-1/2 acfb-transform acfb--translate-x-1/2 acfb-flex acfb-items-center acfb-space-x-2 acfb-z-20">
             <?php foreach ($slides as $index => $slide): ?>
                 <button 
-                    class="hero-carousel-dot acfb-h-2 acfb-rounded-full acfb-bg-secondary-900 acfb-transition-all acfb-duration-300 acfb-border-none acfb-outline-none focus:acfb-ring-0 <?php echo $index === 0 ? 'acfb-w-6 acfb-bg-main-black' : 'acfb-w-2'; ?>"
+                    class="hero-carousel-dot acfb-h-2 acfb-rounded-full acfb-transition-all acfb-duration-300 acfb-border-none acfb-outline-none focus:acfb-ring-0 <?php echo $index === 0 ? 'acfb-w-6 acfb-bg-main-black' : 'acfb-w-2 acfb-bg-secondary-400'; ?>"
                     aria-label="<?php echo esc_attr("Ir a slide " . ($index + 1)); ?>"
                     aria-current="<?php echo $index === 0 ? 'true' : 'false'; ?>"
                     data-index="<?php echo esc_attr($index); ?>"

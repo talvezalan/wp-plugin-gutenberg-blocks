@@ -62,6 +62,14 @@ if (function_exists('acf_add_local_field_group')):
                         'type' => 'true_false',
                         'ui' => 1,
                     ),
+                    array(
+                        'key' => 'field_hcf_slide_link',
+                        'label' => 'Enlace de Slide',
+                        'name' => 'slide_link',
+                        'type' => 'link',
+                        'return_format' => 'array',
+                        'instructions' => 'Opcional: Hace que toda la slide sea clickeable.',
+                    ),
                 ),
             ),
             array(

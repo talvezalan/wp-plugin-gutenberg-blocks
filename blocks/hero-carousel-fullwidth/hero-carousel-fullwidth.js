@@ -23,11 +23,11 @@
         const updateDots = (activeIndex) => {
             dots.forEach((dot, index) => {
                 if (index === activeIndex) {
-                    dot.classList.remove('acfb-bg-secondary-700', 'acfb-w-2');
+                    dot.classList.remove('acfb-bg-secondary-400', 'acfb-w-2');
                     dot.classList.add('acfb-bg-main-black', 'acfb-w-6');
                     dot.setAttribute('aria-current', 'true');
                 } else {
-                    dot.classList.add('acfb-bg-secondary-700', 'acfb-w-2');
+                    dot.classList.add('acfb-bg-secondary-400', 'acfb-w-2');
                     dot.classList.remove('acfb-bg-main-black', 'acfb-w-6');
                     dot.setAttribute('aria-current', 'false');
                 }
