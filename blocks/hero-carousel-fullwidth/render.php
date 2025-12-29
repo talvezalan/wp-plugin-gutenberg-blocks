@@ -17,7 +17,7 @@ $autoplay_ms = $autoplay_speed * 1000;
 // Classes
 $align_class = !empty($block['align']) ? 'align' . $block['align'] : 'alignfull';
 $custom_class = !empty($block['className']) ? $block['className'] : '';
-$classes = "hero-carousel acfb-relative acfb-w-full acfb-h-[70vh] md:acfb-h-[80vh] acfb-overflow-x-hidden acfb-group {$align_class} {$custom_class}";
+$classes = "hero-carousel acfb-relative acfb-z-0 acfb-w-full acfb-h-[70vh] md:acfb-h-[80vh] acfb-overflow-x-hidden acfb-group {$align_class} {$custom_class}";
 
 if (empty($slides)) {
     if ($is_preview) {
