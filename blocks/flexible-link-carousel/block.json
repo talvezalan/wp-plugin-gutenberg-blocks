@@ -1,0 +1,42 @@
+{
+    "name": "acf/flexible-link-carousel",
+    "title": "Flexible Link Carousel",
+    "description": "A flexible carousel for showcasing categories or partner logos.",
+    "category": "acf-blocks",
+    "icon": "images-alt2",
+    "apiVersion": 3,
+    "keywords": [
+        "carousel",
+        "slider",
+        "links",
+        "logos",
+        "categories"
+    ],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "render.php",
+        "blockVersion": 3
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ],
+        "anchor": true,
+        "jsx": false,
+        "customClassName": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview"
+        }
+    },
+    "textdomain": "acf-blocks",
+    "script": "file:./flexible-link-carousel.js"
+}
