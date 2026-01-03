@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "acf/woo-pop-out-cards",
+    "title": "Woo Pop-out Cards",
+    "description": "Muestra productos destacados con diseño pop-out minimalista.",
+    "category": "acf-blocks",
+    "icon": "products",
+    "keywords": [
+        "products",
+        "woocommerce",
+        "cards",
+        "pop-out"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php",
+        "blockVersion": 3
+    },
+    "supports": {
+        "anchor": true,
+        "align": [
+            "wide",
+            "full"
+        ],
+        "customClassName": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview"
+        }
+    }
+}
