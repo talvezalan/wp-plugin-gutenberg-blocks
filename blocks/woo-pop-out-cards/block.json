@@ -1,5 +1,4 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
     "name": "acf/woo-pop-out-cards",
     "title": "Woo Pop-out Cards",
@@ -29,5 +28,6 @@
         "attributes": {
             "mode": "preview"
         }
-    }
+    },
+    "script": "file:./woo-pop-out-cards.js"
 }
