@@ -132,7 +132,7 @@ if (!empty($items)) {
         </button>
 
         <!-- Dots -->
-        <div class="acfb-carousel-dots acfb-flex acfb-justify-center acfb-gap-2 acfb-mt-6">
+        <div class="acfb-carousel-dots acfb-flex acfb-justify-center acfb-gap-2 acfb-mt-6 <?php echo $style_variant === 'logo' ? 'acfb-hidden' : ''; ?>">
         </div>
     <?php endif; ?>
 
